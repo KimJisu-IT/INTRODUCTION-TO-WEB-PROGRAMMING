@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2> 레스토랑 예약하기 </h2>
+    <form method="get" action ="form_app.php">
+        <fieldset>
+            <legend>예약자 정보</legend>
+            예약자: <input type="text" name="person" required> <br>
+            연락처: <input type="tel" name="p_tel" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+            예약인원: <select name="p_num" size="1"> 
+                <option>2명</option>  <option>3명</option> <option>4명</option> <option>5명 이상</option>
+            </select><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>예약 시간 선택</legend>
+            <input type="date" name="p_date">
+            <input type="time" name="p_time">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>메뉴 선택</legend>
+            <input type="checkbox" name="course" value="course1"> 코스 A
+        <input type="checkbox" name="course" value="course2"> 코스 B
+        <input type="checkbox" name="course" value="course3"> 코스 C
+        <input type="checkbox" name="course" value="course4"> 코스 D
+        <p> 요청사항: <br>
+            <textarea name="comment" cols="40" rows="5"> </textarea>
+            </p>
+        </fieldset>
+        <br>
+        <input type="submit" value="예약">
+        <input type="reset" value="취소">
+    </form>
+  </body>
+</html>
